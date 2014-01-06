@@ -6,7 +6,7 @@ Vagrant でさくらのクラウドに Ubuntu 13.04 を up
 Docker にまだバグがあるので 13.04 を入れたいです。
 
 1. [vagrant-sakura](https://github.com/tsahara/vagrant-sakura) を使って、さくらのクラウドに Ubuntu 12.04 をインストール
-2. Ansible で Ubuntu 12.10 -> Ubuntu 13.04 にアップグレード
+2. Ansible で Ubuntu 12.04 -> Ubuntu 12.10 -> Ubuntu 13.04 にアップグレード
 
 
 ## やり方
@@ -30,4 +30,19 @@ eval `cat .env` vagrant up --provider=sakura
 ```
 eval `cat .env` vagrant sakuara-list-id
 ```
+
+## Provisioning
+
+### provision コマンドで
+```
+eval `cat .env` vagrant provision
+```
+
+### 手動で Ansible
+```
+ansible-playbook -i vagrant_ansible_inventory_MyUbuntuServer -u ubuntu -s -vvv provisioning/playbook.yml
+```
+
+- 参考: http://docs.ansible.com/guide_vagrant.html
+
 

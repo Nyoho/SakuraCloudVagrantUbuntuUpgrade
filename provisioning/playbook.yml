@@ -1,0 +1,24 @@
+- hosts: all
+  sudo: true
+  tasks:
+
+  - name: Prompt の lts を normal に
+    lineinfile: dest=/etc/update-manager/release-upgrades state=present regexp='Prompt=.*' line=Prompt=normal
+
+  - name: Remove anacron
+    apt: pkg=anacron state=absent
+
+  - name: Updates it
+    apt: update_cache=yes
+  - name: Upgrade it
+    apt: upgrade=full
+  - name: update-manager-core
+    apt: pkg=update-manager-core state=present
+
+  - name: dist-upgrade to 12.10
+    # shell: do-release-upgrade -d -f DistUpgradeViewNonInteractive
+    command: /usr/bin/do-release-upgrade -f DistUpgradeViewNonInteractive
+
+  - name: dist-upgrade to 13.04
+    # shell: do-release-upgrade -d -f DistUpgradeViewNonInteractive
+    command: /usr/bin/do-release-upgrade -f DistUpgradeViewNonInteractive
