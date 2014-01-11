@@ -46,3 +46,12 @@ ansible-playbook -i vagrant_ansible_inventory_MyUbuntuServer -u ubuntu -s -vvv p
 - 参考: http://docs.ansible.com/guide_vagrant.html
 
 
+## なんと公式解決
+
+さくらのクラウドの公式Twitterアカウント [@sakuracloud](https://twitter.com/sakuracloud) にこのように直訴したところ、
+
+<blockquote class="twitter-tweet" lang="ja"><p><a href="https://twitter.com/sakuracloud">@sakuracloud</a> できればUbuntu13.04のパブリックアーカイブを復活させて欲しいです。(Docker を使いたいですが13.10はまだ問題があるので <a href="https://t.co/yBZGf4wFko">https://t.co/yBZGf4wFko</a>)&#10; <a href="http://t.co/JPp3gAuztm">http://t.co/JPp3gAuztm</a></p>&mdash; 俺たちの師走はこれからだ! (@NeXTSTEP2OSX) <a href="https://twitter.com/NeXTSTEP2OSX/statuses/420226443713339392">2014, 1月 6</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+即刻解決してしまいました!!!
+
+<blockquote class="twitter-tweet" lang="ja"><p><a href="https://twitter.com/NeXTSTEP2OSX">@NeXTSTEP2OSX</a> ご連絡ありがとうございます。Ubuntu13.04のパブリックアーカイブを復活させましたので、ご確認ください。どうぞ、今後とも「さくらのクラウド」をよろしくお願いいたします。</p>&mdash; さくらのクラウド (@sakuracloud) <a href="https://twitter.com/sakuracloud/statuses/420465176983240704">2014, 1月 7</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
